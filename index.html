@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Enabled | Shape the Future</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Keyframe animation for infinite sliding market marquee */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-350px * 5 - 1.5rem * 5)); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 30s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950">
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="text-xl font-bold tracking-tight bg-gradient-to-r align-middle from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Capacitate AI
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+                <a href="#home" class="hover:text-cyan-400 transition py-2">Home</a>
+                <a href="#curriculum-section" onclick="switchTab('school')" class="hover:text-cyan-400 transition py-2">School Programs</a>
+                <a href="#curriculum-section" onclick="switchTab('college')" class="hover:text-cyan-400 transition py-2">College Programs</a>
+                <a href="#internship" class="hover:text-cyan-400 transition py-2">Corporate Internship</a>
+                <a href="#about" class="hover:text-cyan-400 transition py-2">Our Founder</a>
+                <a href="#market" class="hover:text-cyan-400 transition py-2">Market Trends</a>
+            </div>
+            <a href="#connect" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-4 py-2 rounded-lg text-sm font-semibold transition shadow-lg shadow-cyan-500/20">
+                Connect Now
+            </a>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-6 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(6,182,212,0.1),transparent_50%)]"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-flex items-center gap-1.5 py-1 px-3 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-6">
+                Next-Gen AI Platform
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
+                Empowering Students to Become <br class="hidden md:block"/>
+                <span class="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent">AI-Enabled</span>
+            </h1>
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                We bridge the gap between classroom learning and real-world industrial shift. Three clear, separate pathways engineered for school tracks, advanced university training, and senior-year corporate internships.
+            </p>
+        </div>
+    </section>
+
+    <section id="curriculum-section" class="py-24 border-t border-slate-900 bg-slate-900/10">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="flex justify-center mb-12">
+                <div class="bg-slate-900 border border-slate-800 p-1.5 rounded-xl flex space-x-2">
+                    <button id="tab-school-btn" onclick="switchTab('school')" class="px-6 py-2.5 rounded-lg text-sm font-semibold transition cursor-pointer bg-cyan-500 text-slate-950 shadow-lg shadow-cyan-500/20">
+                        School Programs
+                    </button>
+                    <button id="tab-college-btn" onclick="switchTab('college')" class="px-6 py-2.5 rounded-lg text-sm font-semibold transition cursor-pointer text-slate-400 hover:text-white">
+                        College Programs
+                    </button>
+                </div>
+            </div>
+
+            <div id="school-programs-pane" class="block transition-opacity duration-300">
+                <div class="mb-16">
+                    <span class="text-xs font-semibold text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">Room 01</span>
+                    <h2 class="text-3xl font-bold text-white mt-4 mb-2">School AI Programs (Classes 10th - 12th)</h2>
+                    <p class="text-slate-400 text-sm">Outcome-driven curriculums engineered to shift young minds from creative AI users to logical system thinkers.</p>
+                </div>
+
+                <div class="space-y-12">
+                    <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Class 10th: AI Literacy & Personal Productivity</h3>
+                                <p class="text-xs text-cyan-400 font-medium mt-1">Goal: Understand the market landscape, select models, and map out tools to supercharge daily tasks.</p>
+                            </div>
+                            <a href="Class_10_AI_Literacy_Syllabus.pdf" download class="shrink-0 border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-500/5 text-cyan-400 px-4 py-2 rounded-xl text-xs font-medium transition flex items-center gap-2">
+                                <span>⬇ Download Full PDF Syllabus</span>
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                                <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Classes 1-5</span>
+                                <h4 class="text-sm font-bold text-white mt-3 mb-1">01 / Landscape Launchpad</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Master basic mechanics, structural prompt syntax constraints, and differences between Claude, GPT, and Gemini ecosystems.</p>
+                            </div>
+                            <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                                <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Classes 6-15</span>
+                                <h4 class="text-sm font-bold text-white mt-3 mb-1">02 / Accelerated Workflows</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Execute web-connected search routines and large document context analysis using textbooks or multi-page research datasets.</p>
+                            </div>
+                            <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                                <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Classes 16-25</span>
+                                <h4 class="text-sm font-bold text-white mt-3 mb-1">03 / No-Code Creation</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Build custom interactive calculator scripts and sandbox logic spaces inside browser windows using functional Artifact environments.</p>
+                            </div>
+                            <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                                <span class="text-[10px] uppercase font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Classes 26-35</span>
+                                <h4 class="text-sm font-bold text-white mt-3 mb-1">04 / Capstone Dashboard</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Design and refine an integrated personal layout organizational dashboard entirely using descriptive text iteration.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Class 11th: Advanced Prompting & Introduction to Web APIs</h3>
+                                <p class="text-xs text-cyan-400 font-medium mt-1">Goal: Transition into systematic automated execution loops using structured script schemas and system commands.</p>
+                            </div>
+                            <a href="Class_11_Advanced_Prompting_Syllabus.pdf" download class="shrink-0 border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-500/5 text-cyan-400 px-4 py-2 rounded-xl text-xs font-medium transition flex items-center gap-2">
+                                <span>⬇ Download Full PDF Syllabus</span>
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                                <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Classes 1-5</span>
+                                <h4 class="text-sm font-bold text-white mt-3 mb-1">01 / Foundation Sync</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Learn tag segmentation frameworks (XML) and conditional logical syntax structures to eliminate hallucinated response loops.</p>
+                            </div>
+                            <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                                <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Classes 6-15</span>
+                                <h4 class="text-sm font-bold text-white mt-3 mb-1">02 / Pipeline Automation</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Master prompt chaining setups where operational file endpoints parse outputs automatically into sequential next-step triggers.</p>
+                            </div>
+                            <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                                <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Classes 16-25</span>
+                                <h4 class="text-sm font-bold text-white mt-3 mb-1">03 / Demystifying APIs</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Understand the logic of data transmission headers, sending raw requests to endpoints, and parsing basic backend payloads.</p>
+                            </div>
+                            <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                                <span class="text-[10px] uppercase font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Classes 26-35</span>
+                                <h4 class="text-sm font-bold text-white mt-3 mb-1">04 / Automation Capstone</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Construct a script automation module that automatically monitors input data records and structures files cleanly.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Class 12th: Autonomous Agents & The Model Context Protocol (MCP)</h3>
+                                <p class="text-xs text-cyan-400 font-medium mt-1">Goal: Explore state-of-the-art architectures, building local tool connections and safe agent execution parameters.</p>
+                            </div>
+                            <a href="Class_12_Autonomous_Agents_Syllabus.pdf" download class="shrink-0 border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-500/5 text-cyan-400 px-4 py-2 rounded-xl text-xs font-medium transition flex items-center gap-2">
+                                <span>⬇ Download Full PDF Syllabus</span>
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                                <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Classes 1-5</span>
+                                <h4 class="text-sm font-bold text-white mt-3 mb-1">01 / Engineering Logic</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Configure development sandboxes and script dependencies to pass functional data attributes across model processing blocks.</p>
+                            </div>
+                            <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                                <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Classes 6-15</span>
+                                <h4 class="text-sm font-bold text-white mt-3 mb-1">02 / MCP Integration Core</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Utilize open systems schema integrations to safely map engine logic directly to local storage layers and filesystems.</p>
+                            </div>
+                            <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                                <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Classes 16-25</span>
+                                <h4 class="text-sm font-bold text-white mt-3 mb-1">03 / Continuous Loop Code</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Design multi-stage feedback loops enabling processing blocks to parse, review, and adjust active operations autonomously.</p>
+                            </div>
+                            <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                                <span class="text-[10px] uppercase font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Classes 26-35</span>
+                                <h4 class="text-sm font-bold text-white mt-3 mb-1">04 / Production Agent Run</h4>
+                                <p class="text-xs text-slate-400 leading-relaxed">Deploy a continuous workspace agent program that monitors directory spaces and builds compiled tracking indices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="college-programs-pane" class="hidden transition-opacity duration-300">
+                <div class="mb-16">
+                    <span class="text-xs font-semibold text-cyan-400 uppercase tracking-widest bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">Room 02</span>
+                    <h2 class="text-3xl font-bold text-white mt-4 mb-2">College AI Programs (Undergraduate Curriculum)</h2>
+                    <p class="text-slate-400 text-sm">Advanced system frameworks designed for university students to bridge backend architectures with real-world technical execution lines.</p>
+                </div>
+
+                <div class="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Advanced AI Applications & Architecture</h3>
+                            <p class="text-sm text-slate-400 max-w-3xl mt-1">Goal: Transition from basic conversational web windows to production-ready API engineering layouts and enterprise data structures.</p>
+                        </div>
+                        <a href="College_Undergraduate_AI_Syllabus.pdf" download class="shrink-0 border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-500/5 text-cyan-400 px-4 py-2 rounded-xl text-xs font-medium transition flex items-center gap-2">
+                            <span>⬇ Download Full PDF Syllabus</span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                            <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Milestone 01</span>
+                            <h4 class="text-sm font-bold text-white mt-3 mb-1">API Hub Architectures</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Configuring backend token parameters, context cache boundaries, and enterprise error-handling retry layers systematically.</p>
+                        </div>
+                        <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                            <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Milestone 02</span>
+                            <h4 class="text-sm font-bold text-white mt-3 mb-1">Vector DBs & RAG Arrays</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Connecting external relational databases safely to context tracking systems utilizing semantic search mechanisms.</p>
+                        </div>
+                        <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                            <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Milestone 03</span>
+                            <h4 class="text-sm font-bold text-white mt-3 mb-1">Multi-Agent Workflow Labs</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Developing decentralized code script chains where multiple processing nodes evaluate data records to isolate execution log flaws.</p>
+                        </div>
+                        <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                            <span class="text-[10px] uppercase font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Milestone 04</span>
+                            <h4 class="text-sm font-bold text-white mt-3 mb-1">Enterprise System Launch</h4>
+                            <p class="text-xs text-slate-400 leading-relaxed">Packaging production-grade server containers and shipping code pipelines into cloud-hosted metric reporting centers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="internship" class="py-24 border-t border-slate-900 relative">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(6,182,212,0.08),transparent_50%)]"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-flex items-center py-1 px-3 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
+                    Room 03 &bull; Senior Track Only
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">In-House Corporate Internship Program</h2>
+                <p class="text-slate-400">Specially built for passing college students in their <span class="text-cyan-400 font-semibold">6th, 7th, or 8th semesters</span>. Join our core company workspace to execute live feature deployments on functional, real-world commercial software lines.</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-slate-900 to-cyan-950/20 border border-slate-800 p-8 rounded-2xl mb-12">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 border-b border-slate-800/40 pb-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Live App Production Deployment Blueprint</h3>
+                        <p class="text-xs text-cyan-400 font-medium mt-1">Goal: Work inside our native internal engineering spaces to deploy scalable updates directly to commercial markets.</p>
+                    </div>
+                    <a href="AI_Engineering_Fast_Track_Syllabus.pdf" download class="shrink-0 border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-500/5 text-cyan-400 px-4 py-2 rounded-xl text-xs font-medium transition flex items-center gap-2">
+                        <span>⬇ Download Internship Blueprint PDF</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                        <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Weeks 1-4</span>
+                        <h4 class="text-sm font-bold text-white mt-3 mb-1">01 / Corporate Stack Mount</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Configure native production system keys, map localized secure environments, and integrate Model Context servers.</p>
+                    </div>
+                    <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                        <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Weeks 5-8</span>
+                        <h4 class="text-sm font-bold text-white mt-3 mb-1">02 / Repository Contribution</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Collaborate on engineering file systems, passing operational schema matrices through live code-review approval lanes.</p>
+                    </div>
+                    <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                        <span class="text-[10px] uppercase font-bold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">Weeks 9-12</span>
+                        <h4 class="text-sm font-bold text-white mt-3 mb-1">03 / Production Loop Code</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Architect self-sustaining loop structures that execute cloud requests, evaluate responses, and optimize target outputs autonomously.</p>
+                    </div>
+                    <div class="bg-slate-950/60 p-5 rounded-xl border border-slate-850">
+                        <span class="text-[10px] uppercase font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Offboarding</span>
+                        <h4 class="text-sm font-bold text-white mt-3 mb-1">04 / Portfolio Offloading</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Conclude with deep practical codebase experience, active project contributions, and a fully verified enterprise reference track.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#connect" onclick="document.getElementById('status-select').value='Senior College Student (Looking for Internship)';" class="inline-block bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-8 py-3 rounded-xl font-medium transition shadow-lg shadow-cyan-500/20 text-sm">
+                    Apply for Senior Internship
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-24 border-t border-slate-900 bg-slate-900/10">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 items-center">
+                
+                <div class="md:col-span-1 text-center md:text-left">
+                    <div class="relative inline-block w-70 h-70 rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 shadow-2xl">
+                        <img src="founder.jpg" alt="Founder Portrait" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <div class="md:col-span-2 space-y-4">
+                    <span class="text-xs font-semibold text-cyan-400 uppercase tracking-widest block">The Vision</span>
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Meet the Founder</h2>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        "Traditional education parameters are falling significantly behind the industrial frontier shift. We didn't build this platform to teach standard slide decks—we built it to train execution capabilities. Our curriculums are architected from direct enterprise product environments, equipping the next generation with capabilities that make them completely un-replaceable in a shifting global market."
+                    </p>
+                    <div class="pt-2 border-t border-slate-900">
+                        <h4 class="text-base font-semibold text-white">Shankar Kumar Jha</h4>
+                        <p class="text-xs text-cyan-400 font-medium mb-3">Founder & Chief Architect, Capacitate AI</p>
+                        <p class="text-xs text-slate-300 max-w-xl leading-relaxed">
+                        I am a technology professional with over 10 years of experience in the IT industry, specializing in software architecture and the development of production-ready, AI-driven automation solutions for the past five years.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="market" class="py-24 border-t border-slate-900 bg-slate-900/20 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 mb-12">
+            <div class="text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold text-white mb-4">What's Happening in the Market?</h2>
+                <p class="text-slate-400 text-sm">AI literacy is no longer an elective—it is the baseline capability industries demand today.</p>
+            </div>
+        </div>
+        
+        <div class="flex relative w-full">
+            <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-slate-950 to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none"></div>
+            
+            <div class="animate-marquee flex gap-6 px-4">
+                <div class="w-[350px] p-6 rounded-2xl bg-slate-900/40 border border-slate-800 shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 font-bold mb-4">01</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">The Shift to Agents</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Companies are shifting from standard chatbots to specialized AI Agents. Knowing how to architect workflows is the new top-tier skill.</p>
+                </div>
+                <div class="w-[350px] p-6 rounded-2xl bg-slate-900/40 border border-slate-800 shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 font-bold mb-4">02</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">No-Code/AI Integration</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Development cycles have sped up drastically. Building MVPs instantly with natural language is transforming entrepreneurial rules.</p>
+                </div>
+                <div class="w-[350px] p-6 rounded-2xl bg-slate-900/40 border border-slate-800 shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 font-bold mb-4">03</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">The Capability Gap</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Traditional degrees are behind. Employers actively seek candidates who possess integrated AI competencies right out of the gate.</p>
+                </div>
+                <div class="w-[350px] p-6 rounded-2xl bg-slate-900/40 border border-slate-800 shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 font-bold mb-4">04</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Model Context Protocol</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">The architecture ecosystem is standardizing. Connecting models securely to databases via universal protocols is now vital engineering infrastructure.</p>
+                </div>
+                <div class="w-[350px] p-6 rounded-2xl bg-slate-900/40 border border-slate-800 shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 font-bold mb-4">05</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Prompt Caching Realities</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Enterprise budgets prioritize speed. Managing cost optimization matrices and token cache architectures dictates corporate system design.</p>
+                </div>
+            </div>
+
+            <div class="animate-marquee flex gap-6 px-4" aria-hidden="true">
+                <div class="w-[350px] p-6 rounded-2xl bg-slate-900/40 border border-slate-800 shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 font-bold mb-4">01</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">The Shift to Agents</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Companies are shifting from standard chatbots to specialized AI Agents. Knowing how to architect workflows is the new top-tier skill.</p>
+                </div>
+                <div class="w-[350px] p-6 rounded-2xl bg-slate-900/40 border border-slate-800 shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 font-bold mb-4">02</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">No-Code/AI Integration</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Development cycles have sped up drastically. Building MVPs instantly with natural language is transforming entrepreneurial rules.</p>
+                </div>
+                <div class="w-[350px] p-6 rounded-2xl bg-slate-900/40 border border-slate-800 shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 font-bold mb-4">03</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">The Capability Gap</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Traditional degrees are behind. Employers actively seek candidates who possess integrated AI competencies right out of the gate.</p>
+                </div>
+                <div class="w-[350px] p-6 rounded-2xl bg-slate-900/40 border border-slate-800 shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 font-bold mb-4">04</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Model Context Protocol</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">The architecture ecosystem is standardizing. Connecting models securely to databases via universal protocols is now vital engineering infrastructure.</p>
+                </div>
+                <div class="w-[350px] p-6 rounded-2xl bg-slate-900/40 border border-slate-800 shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 font-bold mb-4">05</div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Prompt Caching Realities</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Enterprise budgets prioritize speed. Managing cost optimization matrices and token cache architectures dictates corporate system design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="connect" class="py-24 border-t border-slate-900">
+        <div class="max-w-xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Let's Connect</h2>
+                <p class="text-slate-400">Have questions? Drop us a line and let's get you future-ready.</p>
+            </div>
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                <input type="hidden" name="access_key" value="f6840bf5-07c7-4514-8e33-fa8b3fc10f67">
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Your Name</label>
+                        <input type="text" name="Student Name" required class="w-full bg-slate-900 border border-slate-850 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Email Address</label>
+                        <input type="email" name="Email" required class="w-full bg-slate-900 border border-slate-850 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition text-sm">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Phone Number</label>
+                        <input type="tel" pattern="[0-9]*" inputmode="numeric" name="Phone Number" required placeholder="Enter Contact Number" class="w-full bg-slate-900 border border-slate-850 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Academic Status</label>
+                        <select id="status-select" name="Academic Status" class="w-full bg-slate-900 border border-slate-850 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition text-sm">
+                            <option>School Student (Class 10th - 12th)</option>
+                            <option>College Student (Undergraduate Program)</option>
+                            <option>Senior College Student (Looking for Internship)</option>
+                            <option>Parent / Educator</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">City</label>
+                        <input type="text" name="City" required placeholder="Your City" class="w-full bg-slate-900 border border-slate-850 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">State</label>
+                        <select name="State" class="w-full bg-slate-900 border border-slate-850 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition text-sm">
+                            <option value="" disabled selected>Select State</option>
+                            <option>Andhra Pradesh</option>
+                            <option>Delhi</option>
+                            <option>Karnataka</option>
+                            <option>Kerala</option>
+                            <option>Maharashtra</option>
+                            <option>Tamil Nadu</option>
+                            <option>Telangana</option>
+                            <option>Uttar Pradesh</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Message</label>
+                    <textarea rows="4" name="Message" required placeholder="Tell us how we can help you..." class="w-full bg-slate-900 border border-slate-850 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition text-sm resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:opacity-90 text-slate-950 font-bold py-3.5 rounded-xl transition shadow-lg shadow-cyan-500/10 cursor-pointer">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="border-t border-slate-900 py-8 text-center text-xs text-slate-600">
+        &copy; 2026 AI_ENABLED. All rights reserved.
+    </footer>
+
+    <script>
+        function switchTab(type) {
+            const schoolPane = document.getElementById('school-programs-pane');
+            const collegePane = document.getElementById('college-programs-pane');
+            const schoolBtn = document.getElementById('tab-school-btn');
+            const collegeBtn = document.getElementById('tab-college-btn');
+
+            if (type === 'school') {
+                schoolPane.classList.remove('hidden');
+                schoolPane.classList.add('block');
+                collegePane.classList.add('hidden');
+                collegePane.classList.remove('block');
+
+                // Toggle Button Highlight Style
+                schoolBtn.className = "px-6 py-2.5 rounded-lg text-sm font-semibold transition cursor-pointer bg-cyan-500 text-slate-950 shadow-lg shadow-cyan-500/20";
+                collegeBtn.className = "px-6 py-2.5 rounded-lg text-sm font-semibold transition cursor-pointer text-slate-400 hover:text-white";
+            } else if (type === 'college') {
+                collegePane.classList.remove('hidden');
+                collegePane.classList.add('block');
+                schoolPane.classList.add('hidden');
+                schoolPane.classList.remove('block');
+
+                // Toggle Button Highlight Style
+                collegeBtn.className = "px-6 py-2.5 rounded-lg text-sm font-semibold transition cursor-pointer bg-cyan-500 text-slate-950 shadow-lg shadow-cyan-500/20";
+                schoolBtn.className = "px-6 py-2.5 rounded-lg text-sm font-semibold transition cursor-pointer text-slate-400 hover:text-white";
+            }
+        }
+    </script>
+</body>
+</html>
